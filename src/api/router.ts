@@ -3,7 +3,7 @@
 import { Router} from 'express'
 import { Home } from "./Home"
 import { MangaInfo } from "./MangaInfo"
-
+import { library } from "./library"
 
 const router = Router()
 
@@ -14,5 +14,7 @@ router.get('/home', Home)
 //Informacion de los mangas por el codigo
 router.get('/manga/:code',MangaInfo)
 
+
+router.get('/library', library)
 
 export default router
