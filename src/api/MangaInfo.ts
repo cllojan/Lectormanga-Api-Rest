@@ -55,7 +55,7 @@ export const MangaInfo = async (req: Request,res: Response) =>{
 	});
 
 	manga.data = { ...manga.data, chapters }
-	return res.json(JSON.stringify(manga))
+	return res.json(manga)
     }catch(ex){
 	return res.json({error:"Error"+ex})
     }

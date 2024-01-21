@@ -57,7 +57,7 @@ export const library = async (req: Request, res: Response) => {
             manga.data.push({ title, href, img, types });
 	});
 
-	return res.json(JSON.stringify(manga));
+	return res.json(manga);
     }catch(ex){
 	return res.json({error: "Error" + ex})
     }
