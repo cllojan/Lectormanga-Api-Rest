@@ -1,13 +1,18 @@
 //import express from "express";
-import { Response, Request} from "express"
-import { Router} from 'express';
-import {Home} from "./Home";
 
-const router = Router();
+import { Router} from 'express'
+import { Home } from "./Home"
+import { MangaInfo } from "./MangaInfo"
 
-router.get('/home', Home);
-router.get('/uwu', (_req: Request, res: Response) => {
-    res.send(`<h1>uwu</h1>`)
-});
 
-export default router;
+const router = Router()
+
+
+//Carga de los mangas del inicio de la pagina
+router.get('/home', Home)
+
+//Informacion de los mangas por el codigo
+router.get('/manga/:code',MangaInfo)
+
+
+export default router

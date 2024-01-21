@@ -1,6 +1,7 @@
 import {Request, Response } from "express";
 import cheerio from "cheerio"
-import {fetchData} from "../fetch";
+import { fetchData } from "../fetch";
+
 interface HomeData {
     status:number;
     populares: Array<{}>;
